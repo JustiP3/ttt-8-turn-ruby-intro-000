@@ -1,7 +1,7 @@
 def turn
   board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
   valid = false
-  
+
   while valid == false
     puts "Where would you like to move?"
     input = gets.strip
@@ -9,9 +9,10 @@ def turn
     valid = valid_move(board, index)
       if (valid == true)
         move(board, index)
+        display_board(board)
       end
   end
- 
+
 end
 
 def display_board(array)
