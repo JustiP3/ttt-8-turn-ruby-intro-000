@@ -34,8 +34,7 @@ end
 
 def valid_move?(array, index)
 x = position_taken?(array, index)
-if (x == false)
-  # && x < 9 && x > -1
+if (x == false && index > -1 && index < 9)
   valid_move = true
 else
   valid_move = false
