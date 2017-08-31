@@ -25,8 +25,6 @@ end
 
 def valid_move?(array, index)
 x = position_taken?(array, index)
-valid_move = false
-
 if (x == false && x < 9 && x > -1)
   valid_move = true
 else
@@ -45,7 +43,7 @@ if (array[index] == " " || array[index] == "" || array[index] == nil)
 elsif (array[index] == "X" || array [index] == "O")
   taken = true
 end
-
+return taken
 end
 
 def input_to_index(word)
