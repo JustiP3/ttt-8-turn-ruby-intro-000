@@ -31,6 +31,7 @@ if (x == false && x < 9 && x > -1)
 else
   valid_move = false
 end
+return valid_move
 end
 
 def move(board, index, value = "X")
