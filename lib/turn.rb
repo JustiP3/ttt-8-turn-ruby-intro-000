@@ -1,4 +1,4 @@
-def turn (board = " ", " ", " ", " ", " ", " ", " ", " ", " " )
+def turn (board = [" ", " ", " ", " ", " ", " ", " ", " ", " "] )
   valid = false
   while valid == false
     puts "Please enter 1-9:"
