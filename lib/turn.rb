@@ -25,7 +25,8 @@ end
 
 def valid_move?(array, index)
 x = position_taken?(array, index)
-puts x
+valid_move = false
+
 if (x == false && x < 9 && x > -1)
   valid_move = true
 else
