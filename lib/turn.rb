@@ -1,14 +1,17 @@
-def turn()
-  puts "Where would you like to move?"
-  input = gets.strip
-  index = input_to_index(input)
-
-  if move is valid
-    make move
-    show board
-  else
-    ask for input again
+def turn
+  board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+  valid = false
+  
+  while valid == false
+    puts "Where would you like to move?"
+    input = gets.strip
+    index = input_to_index(input)
+    valid = valid_move(board, index)
+      if (valid == true)
+        move(board, index)
+      end
   end
+ 
 end
 
 def display_board(array)
@@ -31,6 +34,7 @@ end
 def move(board, index, value = "X")
 board[index] = value
 end
+
 def position_taken?(array, index)
 if (array[index] == " " || array[index] == "" || array[index] == nil)
   return false
