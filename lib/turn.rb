@@ -1,13 +1,22 @@
 def turn()
-  ask for input
-  get input
-  convert string to int
+  puts "Where would you like to move?"
+  input = gets.strip
+  index = input_to_index(input)
+  
   if move is valid
     make move
     show board
   else
     ask for input again
   end
+end
+
+def display_board(array)
+puts "#{array[0]}|#{array[1]}|#{array[2]}"
+puts "-----------"
+puts "#{array[3]}|#{array[4]}|#{array[5]}"
+puts "-----------"
+puts "#{array[6]}|#{array[7]}|#{array[8]}"
 end
 
 def is_valid_move?(array, index)
