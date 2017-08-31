@@ -28,6 +28,9 @@ else
 end
 end
 
+def move(board, index, value = "X")
+board[index] = value
+end
 def position_taken?(array, index)
 if (array[index] == " " || array[index] == "" || array[index] == nil)
   return false
