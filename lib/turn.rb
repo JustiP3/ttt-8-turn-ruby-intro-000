@@ -3,7 +3,7 @@ def turn
   valid = false
 
   while valid == false
-    puts "Where would you like to move?"
+    puts "Please Enter 1-9:"
     input = gets.strip
     index = input_to_index(input)
     valid = valid_move(board, index)
