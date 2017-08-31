@@ -2,7 +2,7 @@ def turn()
   puts "Where would you like to move?"
   input = gets.strip
   index = input_to_index(input)
-  
+
   if move is valid
     make move
     show board
@@ -19,14 +19,13 @@ puts "-----------"
 puts "#{array[6]}|#{array[7]}|#{array[8]}"
 end
 
-def is_valid_move?(array, index)
+def valid_move?(array, index)
 x = position_taken?(array, index)
 if (x == false && x < 9 && x > -1)
   return true
 else
   return false
 end
-
 end
 
 def position_taken?(array, index)
