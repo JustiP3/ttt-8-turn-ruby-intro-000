@@ -45,6 +45,6 @@ end
 
 end
 
-def string_to_int(word)
+def input_to_index(word)
 x = word.to_i - 1
 end
