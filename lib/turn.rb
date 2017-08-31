@@ -3,7 +3,7 @@ def turn()
   get input
   convert string to int
   if move is valid
-    make move 
+    make move
     show board
   else
     ask for input again
@@ -11,16 +11,22 @@ def turn()
 end
 
 def is_valid_move?(array, index)
-x = position_taken(array, index)
+x = position_taken?(array, index)
+if (x == false && x < 9 && x > -1)
+  return true
+else
+  return false
 end
 
-def position_taken(array, index)
+end
+
+def position_taken?(array, index)
 if (array[index] == " " || array[index] == "" || array[index] == nil)
   return false
 elsif (array[index] == "X" || array [index] == "O")
   return true
 end
-  
+
 end
 
 def string_to_int(word)
